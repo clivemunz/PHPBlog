@@ -22,11 +22,7 @@ $posts = $stmt->fetchAll()
         <p class="lead">A blog about things I generally find interesting.</p>
         <img src="Resources/clivelars.png"/>
     </section>
-<?php
-$z = 0;
-
-foreach ($posts as $thispost) {
-    ?>
+<?php $z = 0; foreach ($posts as $thispost) { ?>
 
     <div class="container">
         <hr>
@@ -47,8 +43,8 @@ foreach ($posts as $thispost) {
                     <div class="panel-body"><?php echo $thispost['bodyHTML']; ?></div>
 
                     <div class="panel-footer text-right " ><a
-                            href="post.php?date=<?php echo $thispost['postDate']; ?>&id=<?php echo $thispost['postID']; ?>"
-                            class="btn btn-primary">More</a></div>
+                            href="post.php?date=<?php echo $thispost['postDate']; ?>&id=<?php echo $thispost['postID']; ?>#disqus_thread"
+                            class="btn btn-primary">Link</a></div>
                 </div>
             </div>
             <?php if ($z == 0) { ?>
@@ -63,17 +59,26 @@ foreach ($posts as $thispost) {
                         </div>
                     </div>
                 </div>
-            <?php
-            } else {
-                ?>
+            <?php } else { ?>
                 <!-- Put add here? -->
             <?php } ?>
         </div>
 
     </div>
 
-    <?php $z++;
-} ?>
+    <?php $z++; } ?>
 
     <br/><br/><br/>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'clivemunz'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function () {
+            var s = document.createElement('script'); s.async = true;
+            s.type = 'text/javascript';
+            s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+            (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+        }());
+    </script>
 <?php include('footer.php'); ?>
