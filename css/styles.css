@@ -1,0 +1,93 @@
+#home
+{
+    background: url('http://i.imgur.com/vJBg04g.jpg');
+    background-position: 50% 0%;
+    height: 400px;
+    margin: 0 auto;
+    width: 100%;
+    position: relative;
+    box-shadow: 0 0 50px rgba(0,0,0,0.8);
+    padding: 100px 0;
+    background-size: 1920px;
+}
+
+#tech {
+    background: url('http://i.imgur.com/ABUpi1P.jpg');
+    background-position:  50% 0%;
+    height: 400px;
+    margin: 0 auto;
+    width: 100%;
+    position: relative;
+    box-shadow: 0 0 50px rgba(0,0,0,0.8);
+    padding: 100px 0;
+    color: #000;
+    background-size:1920px;
+}
+#sports {
+    background: url('http://i.imgur.com/zX3UdOv.jpg');
+    background-position:  50% 0%;
+    height: 400px;
+    margin: 0 auto;
+    width: 100%;
+    position: relative;
+    box-shadow: 0 0 50px rgba(0,0,0,0.8);
+    padding: 100px 0;
+    color: #fff;
+    background-size:1920px;
+}
+.panel-site {
+    border-color: #8D8D8D;
+}
+.panel-site > .panel-heading {
+    color: #666666;
+    background-color: #E0E0E0;
+    border-color: #8D8D8D;
+}
+
+.panel-site > .panel-footer {
+    background-color: #E0E0E0;
+    border-color: #8D8D8D;
+}
+.panel-site > .panel-heading + .panel-collapse .panel-body {
+    border-top-color: #ddd;
+}
+.panel-site > .panel-footer + .panel-collapse .panel-body {
+    border-bottom-color: #ddd;
+}
+
+.tab-content {
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+}
+
+.nav-tabs {
+    margin-bottom: -1px;
+}
+
+@media (max-width: 480px) {
+    .nav-tabs > li {
+        float:none;
+        border:1px solid #dddddd;
+    }
+    .nav-tabs > li.active > a{
+        border:none;
+    }
+    .nav > li > a:hover, .nav > li > a:focus,
+    .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus
+    {
+        background:none;
+        border:none;
+    }
+}
+
+#galleria{
+    width: 100%;
+    height: 56.25vw; /* 100/56.25 = 1.778 */
+    max-height: 75vh;
+    max-width: 177.78vh; /* 16/9 = 1.778 */
+    margin: auto;
+    top:0;bottom:0; /* vertical center */
+    left:0;right:0; /* horizontal center */
+}

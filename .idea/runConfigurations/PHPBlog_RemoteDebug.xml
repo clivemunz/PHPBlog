@@ -1,0 +1,13 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="PHPBlog RemoteDebug" type="PhpRemoteDebugRunConfigurationType" factoryName="PHP Remote Debug" server_name="Xammp" session_id="bob">
+    <RunnerSettings RunnerId="PhpRemoteDebugRunner" />
+    <ConfigurationWrapper RunnerId="PhpRemoteDebugRunner" />
+    <method>
+      <option name="FtpUpload" enabled="true">
+        <server_id>28d45094-1a8e-4118-84c0-3d535dcbde6f</server_id>
+        <server_name>XAMPP Apache</server_name>
+        <path>C:\Users\Clive\SkyDrive\TechBlogPHP</path>
+      </option>
+    </method>
+  </configuration>
+</component>
