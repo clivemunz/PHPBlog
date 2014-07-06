@@ -1,1 +1,13 @@
 DirectoryIndex home.php
+
+RewriteEngine ON
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+RewriteRule ^Home home.php [L]
+RewriteRule ^Sports sports.php [L]
+RewriteRule ^Tech tech.php [L]
+RewriteRule ^About about.php [L]
+RewriteRule ^Admin admin.php [L]
+
+RewriteRule ^([^/]*)/([^/]*)/([^/]*)$ post.php?date=$1&id=$2&title=$3 [L]

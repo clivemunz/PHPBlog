@@ -2,8 +2,7 @@
     echo "<script type='text/javascript'>$('#Login').modal('show');}</script>";
 } ?>
 
-
-<div class="navbar navbar-inverse navbar-fixed-bottom">
+<div class="navbar navbar-inverse navbar-fixed-bottom footer">
     <div class="container">
 
         <p class="navbar-text pull-left">&copy; Clive Munz</p>
@@ -15,20 +14,18 @@
         </button>
 
         <?php if (empty($_SESSION['user'])): ?>
-            <div class="collapse navbar-collapse navFooterCollapse">
+            <div class="collapse navbar-collapse navFooterCollapse navbar-inverse">
                 <ul class="nav navbar-nav navbar-right">
-                    <li class="<?php echo($page == "register" ? "active" : "") ?>"><a href="register.php">Register</a>
-                    </li>
-                    <li><a href="#Login" data-toggle="modal">Login</a></li>
+                    <li><a href="#Login" data-toggle="modal">Admin</a></li>
                 </ul>
             </div>
         <?php else: ?>
-            <div class="collapse navbar-collapse navFooterCollapse">
+            <div class="collapse navbar-collapse navFooterCollapse navbar-inverse">
                 <ul class="nav navbar-nav navbar-right">
                     <?php $row = $_SESSION['user'];
                     if ($row['admin'] == true) {
                         ?>
-                        <li><a href="admin.php">Admin</a></li>
+                        <li><a href="/Admin">Admin</a></li>
                     <?php
                     }
                     ?>

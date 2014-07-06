@@ -84,4 +84,47 @@ if (isset($_POST['postToDelete'])) {
     echo $result;
 
 }
+
+if (isset($_POST['postsToLoad'])){
+    $offset = $_POST['postsToLoad'];
+    $cat = $_POST['cat'];
+    $query = "SELECT
+                postID,
+                title,
+                imageURL,
+                bodyHTML,
+                postDate,
+                category,
+                author
+            FROM blogpost
+            WHERE category LIKE '$cat'
+            ORDER BY postID DESC
+            LIMIT $offset, 5";
+
+    $stmt = $db->prepare($query);
+    try {
+    $stmt->execute();
+    $result = $stmt->fetchAll();
+    echo json_encode($result);
+    }
+    catch (PDOException $ex){
+        $result = 'Error: ' . $ex->getMessage();
+        echo $result;
+    }
+}
+
+if (isset($_POST['numPosts'])){
+    $cat = $_POST['cat'];
+    $query = "SELECT Count(*) FROM blogpost WHERE category LIKE '$cat'";
+    $stmt = $db->prepare($query);
+    try {
+        $stmt->execute();
+        $result = $stmt->fetchColumn();
+        echo $result;
+    }
+    catch (PDOException $ex){
+        $result = 'Error: ' . $ex->getMessage();
+        echo $result;
+    }
+}
 ?>

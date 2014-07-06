@@ -91,3 +91,20 @@
     top:0;bottom:0; /* vertical center */
     left:0;right:0; /* horizontal center */
 }
+
+body {
+    margin-top: 50px;
+    margin-bottom: 51px;
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 51px;
+}
